@@ -68,7 +68,13 @@ RTT Hosts discovery | - | ZABBIX_PASSIVE | rtt.discovery <br /> LLD Macros: {#PE
 
 # Items collected
 
-# Item Prototypes collected
+Group | Name | Description | Type | Key and additional info |
+------|------|-------------|------|-------------------------|
+RTT | RTT Raw | - | ZABBIX_PASSIVE | rtt.host.raw
+RTT | {#PEER}: rtt_avg_ms | - | DEPENDENT | rtt_avg_ms_[{#PEER}] <br /> JSONPath: $.[?(@.peer=='{#PEER}')].rtt_avg_ms <br /> REGEX: (\[0\-9\]\+\\.\[0\-9\])\|(\[0\-9\]\\.\[0\-9\]\+)\|(\[0\-9\]\+)
+RTT | {#PEER}: rtt_min_ms | - | DEPENDENT | rtt_min_ms_[{#PEER}] <br /> JSONPath: $.[?(@.peer=='{#PEER}')].rtt_min_ms <br /> REGEX: (\[0\-9\]\+\\.\[0\-9\])\|(\[0\-9\]\\.\[0\-9\]\+)\|(\[0\-9\]\+)
+RTT | {#PEER}: rtt_max_ms | - | DEPENDENT | rtt_max_ms_[{#PEER}] <br /> JSONPath: $.[?(@.peer=='{#PEER}')].rtt_max_ms <br /> REGEX: (\[0\-9\]\+\\.\[0\-9\])\|(\[0\-9\]\\.\[0\-9\]\+)\|(\[0\-9\]\+)
+RTT | {#PEER}: rtt_mdev_ms | - | DEPENDENT | rtt_mdev_ms_[{#PEER}] <br /> JSONPath: $.[?(@.peer=='{#PEER}')].rtt_mdev_ms <br /> REGEX: (\[0\-9\]\+\\.\[0\-9\])\|(\[0\-9\]\\.\[0\-9\]\+)\|(\[0\-9\]\+)
 
 # Triggers
 
