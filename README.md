@@ -50,5 +50,29 @@ systemctl restart zabbix-agent
 
 # Zabbix configuration
 
+### Macros used
 
+Name | Description | Default |
+-----|-------------|---------|
+{$RTT_AVG_THRESHOLD} | ms | 100
+
+# Template links
+
+There are no template links in this template.
+
+# Discovery rules
+
+Name | Description | Type | Key and additional info |
+-----|-------------|------|-------------------------|
+RTT Hosts discovery | - | ZABBIX_PASSIVE | rtt.discovery <br /> LLD Macros: {#PEER} <br /> JSONPath: $.peer
+
+# Items collected
+
+# Item Prototypes collected
+
+# Triggers
+
+# Feedback
+
+an0th3rdba@gmail.com
 
