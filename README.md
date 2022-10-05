@@ -78,6 +78,10 @@ RTT | {#PEER}: rtt_mdev_ms | - | DEPENDENT | rtt_mdev_ms_[{#PEER}] <br /> JSONPa
 
 # Triggers
 
+Name | Description | Expression | Severity | Dependencies and additional info |
+-----|-------------|------------|----------|----------------------------------|
+Average round trip time to {#PEER} too high (latency = {ITEM.LASTVALUE}) | - | Problem:<br /> last(/Round Trip Time/rtt_avg_ms_[{#PEER}])>={$RTT_AVG_THRESHOLD} :<br /> Recovery:<br /> last(/Round Trip Time/rtt_avg_ms_[{#PEER}])<{$RTT_AVG_THRESHOLD} | AVERAGE | -
+
 # Feedback
 
 an0th3rdba@gmail.com
