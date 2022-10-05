@@ -45,6 +45,6 @@ if [[ ${1} == "raw" ]] && [[ -s ${HOSTS} ]]; then
     wait
     sed -i '$ s/.$//' ${TMP_FILE}
     printf "]" >> ${TMP_FILE}
+    cat ${TMP_FILE} > ${OUT_FILE}
 fi
 
-cat ${TMP_FILE} > ${OUT_FILE}
